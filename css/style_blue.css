@@ -1,0 +1,833 @@
+@charset "utf-8";
+
+.pc {
+    display: block;
+}
+
+.sp {
+    display: none;
+}
+
+@media only screen and (max-width: 999px) {
+    .pc {
+        display: none;
+    }
+    .sp {
+        display: block;
+    }
+}
+
+/* ----------------------------------------------------------
+Common Setting
+---------------------------------------------------------- */
+
+/*body*/
+
+.inner {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/*clear*/
+
+.clear-both {
+    clear: both
+}
+
+.clear-left {
+    clear: left
+}
+
+.clear-right {
+    clear: right
+}
+/*link*/
+
+a:link,
+a:visited,
+a:active {
+    color: #000;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover {
+    opacity: 0.75;
+    text-decoration: none;
+    outline: 0
+}
+
+input:hover,
+a:hover img {
+    opacity: 0.75;
+    outline: 0
+}
+
+/*text*/
+
+body {
+    font-family: "Noto Sans Japanese", "メイリオ", "Meiryo", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Sans-Serif;
+    line-height: 1.5;
+}
+
+/*img*/
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic
+}
+
+/*title*/
+
+h1 {
+    font-family: "Sawarabi Mincho", 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 28px;
+    font-weight: bold;
+    border-top: 5px solid #459be1;
+    border-bottom: 2px solid #b0afaf;
+    background-color: #f0f0f0;
+    line-height: 1.2;
+    padding: 10px 0 10px 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: "Sawarabi Mincho", 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 24px;
+    font-weight: bold;
+    border-left: 7px solid #459be1;
+    background-color: #f0f0f0;
+    line-height: 1.2;
+    padding: 5px 0 5px 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: "Sawarabi Mincho", 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+h3 ul {
+    margin-top: 7px;
+    display: flex;
+}
+
+h3 ul li:first-of-type {
+    height: 2px;
+    width: 40%;
+    background-color: #459be1;
+}
+
+
+h3 ul li:last-of-type {
+    height: 2px;
+    width: 60%;
+    background-color: #f0f0f0;
+}
+
+h4 {
+    font-family: "Sawarabi Mincho", 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+h5 {
+    font-family: "Sawarabi Mincho", 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+    border-left: solid 3px #459be1;
+    padding-left: 8px;
+}
+
+/* ----------------------------------------------------------
+header
+---------------------------------------------------------- */
+
+/*header_layout*/
+
+.header .inner {
+    padding: 5px 0 15px;
+}
+
+.site_description {
+    font-size: 14px;
+}
+
+.site_description span {
+    color: #bc0000;
+}
+
+.header_title {
+    font-family: "Sawarabi Mincho", 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.header_layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.header_right {
+    overflow: hidden;
+}
+
+.header_tel {
+    font-family: "Sawarabi Mincho", 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.header_tel::before {
+    content: url(../images/header_tel.png);
+    margin-right: 10px;
+}
+
+
+.reception_time {
+    font-size: 14px;
+    font-weight: bold;
+    float: right;
+    margin-top: 5px;
+}
+
+/* ----------------------------------------------------------
+nav
+---------------------------------------------------------- */
+
+/*g_nav*/
+
+.nav {
+    background: linear-gradient(to bottom, #6cb3eb, #459be1);
+}
+
+.g_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.g_nav_layout {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.g_nav_layout li {
+    width: 20%;
+}
+
+.g_nav_layout li a {
+    font-family: "Sawarabi Mincho", 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    border-left: 1px solid #f9f9f9;
+    border-top: 5px solid #6cb3eb;
+    padding: 5px 0 10px;
+    display: block;
+}
+
+.g_nav_layout li:last-of-type a {
+    border-right: 1px solid #f9f9f9;
+}
+
+.g_nav_layout li a:hover {
+    color: #459be1;
+    opacity: 1;
+    background-color: #f9f9f9;
+    border-top: 5px solid #459be1;
+}
+
+/* ----------------------------------------------------------
+contents
+---------------------------------------------------------- */
+
+.contents {
+    padding: 25px 0 100px;
+}
+
+.contents_layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mv {
+    margin-bottom: 25px;
+}
+
+/*side_bar*/
+
+.side_bar {
+    width: 300px;
+}
+
+.side_bar_title {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    background-color: #459be1;
+    padding: 5px 0;
+}
+
+h2.side_bar_title {
+    margin-bottom: 0;
+}
+
+.side_bar_contents h5 {
+    margin: 10px 0;
+}
+
+.side_bar_contents {
+    padding: 10px;
+    border: 1px solid #b1ccd4;
+    border-top: none;
+}
+
+.side_bar_text {
+    font-size: 14px;
+}
+
+/*main_contents*/
+
+.main_contents {
+    width: 680px;
+}
+
+.section {
+    padding-bottom: 45px;
+}
+
+/* ----------------------------------------------------------
+sub_footer
+---------------------------------------------------------- */
+
+.sub_footer {
+    padding: 10px 0 20px;
+    background-color: #f0f0f0;
+}
+
+/*footer_menu*/
+
+.footer_menu {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_menu li {
+    padding: 0 10px;
+    line-height: 1;
+}
+
+.footer_menu li:not(:last-child) {
+    border-right: solid #b0afaf 1px;
+}
+
+.footer_menu a {
+    color: #000;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer_menu a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+
+.footer_menu a:hover {
+    transition: auto;
+}
+
+.footer_logo {
+    font-family: "Sawarabi Mincho", 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.footer_site_description {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.footer_site_description span {
+    color: #bc0000;
+}
+
+.footer_tel {
+    font-family: "Sawarabi Mincho", 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer_tel::before {
+    content: url(../images/footer_tel.png);
+    margin-right: 10px;
+}
+
+/* ----------------------------------------------------------
+footer
+---------------------------------------------------------- */
+
+/*footer*/
+
+.footer {
+    background: linear-gradient(to bottom, #6cb3eb, #459be1);
+    border-top: 3px solid #459be1
+}
+
+.footer .inner {
+    padding: 10px 0;
+}
+
+.copyright {
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 999px) {
+    /* ----------------------------------------------------------
+Common Setting
+---------------------------------------------------------- */
+    /*body*/
+    .inner {
+        width: 95%;
+    }
+    /*title*/
+    h1 {
+        font-size: 24px;
+        padding: 10px 0 10px 15px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    h3 ul {
+        margin-top: 5px;
+        display: flex;
+    }
+
+    h3 ul li:first-of-type {
+        width: 50%;
+    }
+
+
+    h3 ul li:last-of-type {
+        width: 50%;
+    }
+
+    h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+    /*table*/
+    table {
+        width: 100%;
+    }
+
+    table tr td:first-of-type {
+        width: 20%;
+    }
+
+    table tr td:last-of-type {
+        width: 80%;
+    }
+
+    /* ----------------------------------------------------------
+header
+---------------------------------------------------------- */
+    /*header_layout*/
+    .header_layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .header_right {
+        overflow: hidden;
+    }
+
+    .header_tel {
+        font-size: 38px;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    .header_tel::before {
+        content: url(../images/header_tel.png);
+        margin-right: 10px;
+    }
+
+
+    .reception_time {
+        font-size: 14px;
+        font-weight: bold;
+        float: right;
+        margin-top: 5px;
+    }
+
+    /*header_layout*/
+    .header .inner {
+        padding: 5px 0 10px;
+    }
+
+    .site_description {
+        font-size: 10px;
+    }
+    .header_title {
+        font-size: 28px;
+    }
+
+    .header_title img {
+        width: 65%;
+    }
+
+
+    .header_layout {
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .nav_toggle {
+        width: 30px;
+        height: 21px;
+        cursor: pointer
+    }
+
+    .nav_toggle div {
+        position: relative
+    }
+
+    .nav_toggle span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        border-bottom: solid 3px #000000;
+        transition: .35s ease-in-out
+    }
+
+    .nav_toggle span:nth-child(1) {
+        top: 0
+    }
+
+    .nav_toggle span:nth-child(2) {
+        top: 9px
+    }
+
+    .nav_toggle span:nth-child(3) {
+        top: 18px
+    }
+
+    .sp_menu_text {
+        font-size: 10px;
+        text-align: center;
+        margin-top: 3px;
+    }
+
+    .nav_toggle {
+        display: block
+    }
+
+    .open_nav .nav_toggle span:nth-child(1) {
+        top: 11px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+    }
+
+    .open_nav .nav_toggle span:nth-child(2),
+    .open_nav .nav_toggle span:nth-child(3) {
+        top: 11px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg)
+    }
+
+    /* ----------------------------------------------------------
+nav
+---------------------------------------------------------- */
+    /*g_nav*/
+    .nav {
+        background: linear-gradient(to bottom, #6cb3eb, #459be1);
+        display: none;
+        position: absolute;
+        width: 100%;
+    }
+
+    .nav .inner {
+        width: 100%;
+    }
+
+    .g_nav {
+        display: block;
+    }
+
+
+    .g_nav_layout {
+        display: block;
+        width: auto;
+    }
+
+    .g_nav_layout li {
+        width: 100%;
+    }
+
+    .g_nav_layout li a {
+        font-size: 18px;
+        text-align: left;
+        padding: 15px 2.5%;
+        display: block;
+        background: url(../images/sp_menu_arrow.png);
+        background-repeat: no-repeat;
+        background-position: center right 2.5%;
+        border-left: none;
+        border-top: none;
+        border-top: solid #fff 1px;
+    }
+
+    .g_nav_layout li:last-of-type a {
+        border-right: none;
+    }
+
+    .g_nav_layout li a:hover {
+        border-top: solid #fff 1px;
+    }
+    /* ----------------------------------------------------------
+sub_footer
+---------------------------------------------------------- */
+    .sub_footer {
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+
+    .sub_footer .inner {
+        width: 100%;
+    }
+    /*footer_menu*/
+    .footer_menu {
+        display: block;
+        border-top: solid #b0afaf 1px;
+    }
+
+    .footer_menu li {
+        padding: 0;
+    }
+
+    .footer_menu li:not(:last-child) {
+        border-right: none;
+        border-bottom: solid #b0afaf 1px;
+    }
+
+    .footer_menu a {
+        font-size: 18px;
+        padding: 15px 2.5%;
+        display: block;
+        background: url(../images/footer_arrow.png);
+        background-repeat: no-repeat;
+        background-position: center right 2.5%;
+    }
+
+    .footer_menu a:hover {
+        text-decoration: none;
+    }
+
+    .footer_tel_sp_layout {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #459be1;
+        padding: 5px 0;
+        height: 58px;
+        box-sizing: border-box;
+    }
+
+    .footer_tel_sp {
+        font-family: "Sawarabi Mincho", 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .footer_tel_sp a {
+        color: #fff;
+    }
+
+    .footer_tel_sp::before {
+        content: url(../images/footer_tel.png);
+        margin-right: 10px;
+    }
+
+
+    .reception_time_sp {
+        color: #fff;
+        text-align: center;
+        font-size: 12px;
+        font-weight: normal;
+        float: none;
+        margin-top: 2px;
+    }
+
+    .page_top {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    /* ----------------------------------------------------------
+footer
+---------------------------------------------------------- */
+    /*footer*/
+    .footer {
+        background: linear-gradient(to bottom, #6cb3eb, #459be1);
+        margin-bottom: 58px;
+    }
+}
+
+@media screen and (max-width: 999px) and (min-width: 768px) {
+
+    /* ----------------------------------------------------------
+header
+---------------------------------------------------------- */
+    .header_title img {
+        width: 80%;
+    }
+
+    .site_description {
+        font-size: 12px;
+    }
+    /* ----------------------------------------------------------
+contents
+---------------------------------------------------------- */
+    .contents {
+        padding: 0 0 25px;
+    }
+
+    /*main_contents*/
+    .main_contents {
+        width: calc(100% - 320px);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /*table*/
+    .table {
+        width: 100%;
+        display: block;
+    }
+
+    .table li:nth-of-type(odd) {
+        border-right: 1px solid #e2e2e2;
+        width: 100%;
+    }
+
+    .table li:nth-of-type(even) {
+        width: 100%;
+    }
+
+    /* ----------------------------------------------------------
+contents
+---------------------------------------------------------- */
+    /*main_contents*/
+    .contents {
+        padding: 0 0 25px;
+    }
+
+    .contents_layout {
+        flex-direction: column;
+    }
+
+    .mv {
+        margin-bottom: 20px;
+    }
+    /*side_bar*/
+    .side_bar {
+        width: 100%;
+        order: 2;
+        margin-top: 10px;
+    }
+
+    .side_bar_title {
+        font-size: 16px;
+    }
+
+    .side_bar_text {
+        font-size: 12px;
+    }
+
+
+    /*main_contents*/
+    .main_contents {
+        width: 100%;
+        order: 1;
+    }
+
+    .section {
+        padding-bottom: 25px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+}
+
+/* ----------------------------------------------------------
+---------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------
+---------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------
+---------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------
+---------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------
+---------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------
+---------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------
+---------------------------------------------------------- */
+
+}
