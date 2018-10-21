@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <link rel="stylesheet" href="./css/eric-meyer-reset.css" type="text/css">
     <link rel="stylesheet" href="./css/style_blue.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="./js/script.js"></script>
     <title>お問い合わせ&見積もりフォーム</title>
 </head>
 
@@ -21,15 +23,15 @@
     <div class="container">
         <header class="header">
             <div class="inner">
-                <p class="site_description">株式会社ビットアークス</p>
+                <p class="site_description"></p>
                 <div class="header_layout">
                     <div class="header_left">
-                        <div class="header_title">Vue.jsによる問い合わせ&見積フォーム</div>
+                        <div class="header_title">Vue.jsによる見積りフォーム</div>
                     </div>
                     <ul class="header_right pc">
                         <li class="header_tel"><a href="tel:03-4405-8916">03-4405-8916</a></li>
                         <li class="reception_time">受付時間: 10:00 〜 18:00</li>
-                    </ul>
+        </ul>
                     <div class="sp_menu sp" id="sp_menu">
                         <div class="nav_toggle" id="nav_toggle">
                             <div>
@@ -45,7 +47,7 @@
             <div class="inner">
                 <div class="g_nav pc">
                     <ul class="g_nav_layout"><li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-24"><a href="/">ホーム</a></li>
-                    <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://bitarx.jp">作成会社</a></li>
+                    <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://bitarx.jp">bitarxについて</a></li>
                     <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="https://github.com/bitarx/vue_form">ソースコード</a></li>
                     <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-18 current_page_item menu-item-20"><a href="/">見積りフォーム</a></li>
                     </ul>
@@ -72,34 +74,35 @@
                     <h2>工事内容</h2>
                     <div role="form" class="wpcf7" id="wpcf7-f91-p18-o1" lang="ja" dir="ltr">
                         <div class="screen-reader-response"><span class="must">必須</span></div>
-                        <div id ="app">
-                        <form class="wpcf7-form">
-                            <div :class="errorClassObject('attach_num')">
-                                <p>エアコン取り付け
-                                <span><input v-model="edit.attach_num" type="text" id="attach_num" /></span>台</p>
-                            </div>
+                        <form action="/inquery#wpcf7-f91-p18-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                            <div style="display: none;">
+                                <input type="hidden" name="_wpcf7" value="91" />
+                                <input type="hidden" name="_wpcf7_version" value="5.0.3" />
+                                <input type="hidden" name="_wpcf7_locale" value="ja" />
+                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f91-p18-o1" />
+                                <input type="hidden" name="_wpcf7_container_post" value="18" />
+                            </div><wbr>
+                            <p>エアコン取り付け
+                            <span><input type="text" name="attach_num" value="" /></span>台</p>
                             <div class="space_small"></div>
-                            <div :class="errorClassObject('new_attach_num')">
-                                <p>新品エアコン取り付け
-                                <span><input v-model="edit.new_attach_num" type="text" id="new_attach_num" /></span>台</p>
-                            </div>
+                            <p>新品エアコン取り付け
+                            <span><input type="text" name="new_attach_num" value="" /></span>台</p>
                             <div class="space_small"></div>
-                            <div :class="errorClassObject('removal')">
-                                <p>エアコン取り外し
-                                <span><input v-model="edit.removal" type="text" id="removal" /></span>台</p>
-                            </div>
+                            <p>エアコン取り外し
+                            <span><input type="text" name="removal" value="" /></span>台</p>
                             <div class="space_small"></div>
-                            <div :class="errorClassObject('relocate')">
-                                <p>エアコン移設
-                                <span><input v-model="edit.relocate" type="text" name="relocate" /></span>台</p>
-                            </div>
-                            <div class="space_middle"></div>
-                            <div :class="errorClassObject('reserve_date')">
-                                <p><span class="must">必須</span>工事希望日<br />
-                                <span><input v-model="edit.reserve_date" type="text" id="reserve_date" aria-required="true" aria-invalid="false" placeholder="例）2018/11/20" /></span></p>
-                            </div>
-                            <div class="space_middle"></div>
-                            <div class="center"><input type="submit" value="住所入力へ" class="wpcf7-form-control wpcf7-submit sub-btn" @click="doSubmit" :disabled="isValid == false" /></div>
+                            <p>エアコン移設
+                            <span><input type="text" name="relocate" value="" /></span>台</p>
+                            <div class="space_small"></div>
+                            <div class="space_small"></div>
+                            <p><span class="must">必須</span>工事希望日<br />
+                            <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="例）○○○＠xxxx.com" /></span></p>
+                            <div class="space_small"></div>
+                            <p>お問い合わせ内容<br />
+                            <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="お問い合わせ内容をご記入ください。"></textarea></span></p>
+                            <p><span class="wpcf7-form-control-wrap acceptance-555"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-555" value="1" aria-invalid="false" /><span class="wpcf7-list-item-label">上記内容でよろしければチェックを入れてください</span></label></span></span></span></p>
+                            <div class="space_small"></div>
+                            <div class="center"><input type="submit" value="送信" class="wpcf7-form-control wpcf7-submit sub-btn" /></div>
                             <div class="wpcf7-response-output wpcf7-display-none"></div>
                         </form>
                         </div>
@@ -118,13 +121,26 @@
         </div>
         <footer class="footer">
             <div class="inner">
-                <p class="copyright"><small>Copyright © 2018 bitarx All Rights Reserved.</small></p>
+                <p class="copyright"><small>Copyright © 2018 Atelier charlotte All Rights Reserved.</small></p>
             </div>
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <script>
-        document.write('<script src="./js/script.js?' + parseInt((new Date)/1000) + '"><\/script>');
+    <script type="text/javascript">
+    $(function() {
+        var ua = navigator.userAgent;
+        if ((ua.indexOf('iPhone') > 0) || ua.indexOf('iPod') > 0 || (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0)) {
+            $('head').prepend('<meta name="viewport" content="width=device-width,initial-scale=1">');
+        } else {
+            $('head').prepend('<meta name="viewport" content="width=960">');
+        }
+        $("#menu_btn").click(function() {
+            $("#g_nav_sp").slideToggle(200);
+            $(".menu_close").toggleClass("toggle_menu");
+            $(".menu_open").toggleClass("toggle_menu");
+        });
+    });
     </script>
+<script type='text/javascript' src='https://www.charlotte-hat.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.3'></script>
+<script type='text/javascript' src='https://www.charlotte-hat.com/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
 </body>
 </html>

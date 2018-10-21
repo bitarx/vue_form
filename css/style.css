@@ -1,7 +1,6 @@
 /** 共通のcss */
 p {
 	letter-spacing: 0.10em;
-	font-size: 16px;
 }
 
 .mark {
@@ -89,15 +88,30 @@ p {
 	letter-spacing: 0.2em;
 }
 
-.wpcf7 input[type="text"],
-.wpcf7 input[type="email"],
+.wpcf7 input[type="text"] {
+	width: 25%;
+	padding: 8px 15px;
+	margin-right: 10px;
+	margin-top: 10px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+.wpcf7 input[type="email"] {
+	width: 80%;
+	padding: 8px 15px;
+	margin-right: 10px;
+	margin-top: 10px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+
 .wpcf7 textarea  {
-	 width: 100%;
-	 padding: 8px 15px;
-	 margin-right: 10px;
-	 margin-top: 10px;
-	 border: 1px solid #ddd;
-	 border-radius: 3px;
+	width: 100%;
+	padding: 8px 15px;
+	margin-right: 10px;
+	margin-top: 10px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
 }
 
 /* 送信ボタン */
@@ -114,13 +128,13 @@ input.sub-btn {
 	-moz-transition: 0.3s;
 	-o-transition: 0.3s;
 	-ms-transition: 0.3s;
-	transition: 0.3s;	
+	transition: 0.3s;
 }
 
 /* 送信ボタンホバー */
 input.sub-btn:hover{
 	background: #FFF;
-	color: #F90;  
+	color: #F90;
 }
 
 .center {
@@ -163,4 +177,8 @@ input.sub-btn:hover{
 	.img_main_middle {
 		width:415px;
 	}
+}
+
+.has-error input {
+    background-color: #ff69b4;
 }
